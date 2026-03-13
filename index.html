@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">YN<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Projects</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">PORTFOLIO</div>
+    <div class="hero-content">
+      <p class="hero-tag reveal">Available for work</p>
+      <h1 class="hero-name reveal">
+        <span>Your</span>
+        <span class="outline">Name</span>
+      </h1>
+      <p class="hero-role reveal">
+        <span class="typed" id="typed"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-desc reveal">
+        I craft beautiful digital experiences — from concept to pixel-perfect implementation.
+        Based anywhere. Working everywhere.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <span>YOUR<br/>PHOTO</span>
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">Crafting digital<br/><em>experiences</em></h2>
+          <p>
+            Hi! I'm a passionate developer and designer who loves turning ideas into elegant,
+            functional products. With a strong eye for detail and a love for clean code,
+            I build things that matter.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring design trends, contributing to
+            open source, or grabbing a great cup of coffee ☕
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Projects Done</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+          <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title">What I work<br/><em>with</em></h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML / CSS / JavaScript</li>
+            <li>React / Next.js</li>
+            <li>Tailwind CSS</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛠</div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js / Express</li>
+            <li>Python / Django</li>
+            <li>REST APIs</li>
+            <li>PostgreSQL / MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Design</h3>
+          <ul>
+            <li>Figma / Adobe XD</li>
+            <li>UI/UX Design</li>
+            <li>Prototyping</li>
+            <li>Design Systems</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>DevOps</h3>
+          <ul>
+            <li>Git / GitHub</li>
+            <li>Docker</li>
+            <li>Vercel / Netlify</li>
+            <li>CI/CD Pipelines</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">03 / Projects</div>
+      <h2 class="section-title">Selected<br/><em>work</em></h2>
+      <div class="projects-list">
+
+        <div class="project-item">
+          <div class="project-num">01</div>
+          <div class="project-info">
+            <h3>Project One</h3>
+            <p>A full-stack web application that solves X problem elegantly. Built with React, Node.js, and PostgreSQL.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>PostgreSQL</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live ↗</a>
+            <a href="#" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-num">02</div>
+          <div class="project-info">
+            <h3>Project Two</h3>
+            <p>An e-commerce platform with real-time inventory, payment integration, and an admin dashboard.</p>
+            <div class="project-tags">
+              <span>Next.js</span><span>Stripe</span><span>MongoDB</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live ↗</a>
+            <a href="#" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-num">03</div>
+          <div class="project-info">
+            <h3>Project Three</h3>
+            <p>A mobile-first design system and component library used across multiple production applications.</p>
+            <div class="project-tags">
+              <span>TypeScript</span><span>Storybook</span><span>Tailwind</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live ↗</a>
+            <a href="#" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-num">04</div>
+          <div class="project-info">
+            <h3>Project Four</h3>
+            <p>An AI-powered tool that automates repetitive workflows, saving teams hours of manual work per week.</p>
+            <div class="project-tags">
+              <span>Python</span><span>OpenAI</span><span>FastAPI</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live ↗</a>
+            <a href="#" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">04 / Contact</div>
+      <div class="contact-inner">
+        <h2 class="contact-title">Let's build<br/>something <em>great</em></h2>
+        <p class="contact-sub">Have a project in mind? I'd love to hear about it.</p>
+        <a href="mailto:your@email.com" class="contact-email">your@email.com</a>
+        <div class="contact-socials">
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>© 2025 Your Name. Designed & Built with ❤️</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>vv
